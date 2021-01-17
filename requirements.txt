@@ -1,0 +1,2 @@
+pyttsx3>=2.90
+pyfiglet>=0.8.post1
