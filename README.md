@@ -1,6 +1,3 @@
-
-
-
 # Devs-console :smile:
 - #### The Console made with python only for windows
 
@@ -121,3 +118,4 @@ pip install -r requirements.txt
 
 
  
+
