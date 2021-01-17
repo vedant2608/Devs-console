@@ -308,7 +308,7 @@ Enter the wifi name which is in user profiles [Enter any name which is infront o
 Enter the name of your wifi: ''').strip()
                 try:
                     print("Password is =>",subprocess.check_output(
-                        ["netsh", "wlan", "show", "profiles", '"'+network_name+'"', "key=clear"]).decode().replace('\r',
+                        ["netsh", "wlan", "show", "profiles", network_name, "key=clear"]).decode().replace('\r',
                                                                                                              " ").split(
                         "\n")[32].split(':')[1].strip())
                 except subprocess.CalledProcessError as cpe:
