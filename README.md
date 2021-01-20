@@ -19,6 +19,7 @@
     - [X]  Show list of previsiously connected network :scroll:
     - [X]  Show password of previsiously connected network :closed_lock_with_key: 
     - [X]  Generate Battery report
+    - [X]  Alter brightness
  ###### If you enter the command for task and it is not in the default commands, don't worry the program will ask you whether to remember the command or not...:innocent:
  ---
  ## How to use this console 
