@@ -100,7 +100,7 @@ pip install -r requirements.txt
  |Show list of previsiously connected network|show wifi|
  |Show password of previsiously connected network|wifi password|
  |Generate battery report and open the battery report and open it in the browser|battery report|
- |To change brightness|change brightness|
+ |To change brightness|brightness|
 ---
 ## Contributor's list 
 ###### Update your name if you contribute to code  
