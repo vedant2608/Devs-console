@@ -8,6 +8,7 @@
 
 - #### You can use all powershell commands in the console
 - #### What you can do interactively
+    - [x]  Get the Help for dev
     - [x]  Exit the console :sleeping:  
     - [X]  Introduce dev to yourself :hugs:
     - [X]  Greet dev :wave:
@@ -87,6 +88,7 @@ pip install -r requirements.txt
 :a: Add the default command to execute your tasks
  | Tasks            | Command for task       |
  |    :---         |     :---      |
+ |To ask for the console|help-dev|
  | Exit the console | exit           |
  | Introduce dev to yourself| who there|
  | Greet dev     | hey there |
@@ -96,7 +98,8 @@ pip install -r requirements.txt
  |Open file in notepad|open file|
  |Show list of previsiously connected network|show wifi|
  |Show password of previsiously connected network|wifi password|
- |Generate battery report and open the battery report|battery report|
+ |Generate battery report and open the battery report and open it in the browser|battery report|
+ |To change brightness|change brightness|
 ---
 ## Contributor's list 
 ###### Update your name if you contribute to code  
