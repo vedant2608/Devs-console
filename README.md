@@ -17,6 +17,7 @@
     - [X]  Open file in notepad :notebook_with_decorative_cover: :pen:
     - [X]  Show list of previsiously connected network :scroll:
     - [X]  Show password of previsiously connected network :closed_lock_with_key: 
+    - [X]  Generate Battery report
  ###### If you enter the command for task and it is not in the default commands, don't worry the program will ask you whether to remember the command or not...:innocent:
  ---
  ## How to use this console 
@@ -32,7 +33,7 @@
  ``` bash
 pip install -r requirements.txt
  ```
- #### 3. Make a symbolic link by `mklink dev dev.bat` and then type `.\dev` or directly run `dev.bat`
+ #### 4. Make a symbolic link by `mklink dev dev.bat` and then type `.\dev` or directly run `dev.bat`
   - ###### with symbolic link
  ```bash
   mklink dev dev.bat
@@ -95,6 +96,7 @@ pip install -r requirements.txt
  |Open file in notepad|open file|
  |Show list of previsiously connected network|show wifi|
  |Show password of previsiously connected network|wifi password|
+ |Generate battery report and open the battery report|battery report|
 ---
 ## Contributor's list 
 ###### Update your name if you contribute to code  

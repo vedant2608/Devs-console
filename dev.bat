@@ -25,5 +25,5 @@ echo " |____/ u  |_____|     U  \_/-(_/  ";
 echo "  |||_     <<   >>       //        ";
 echo " (__)_)   (__) (__)     (__)       ";
 
-echo   type help or Enter the commands as you want use assistant
+echo   Enter the commands as you want use assistant
 assistant.bat

@@ -1,3 +1,4 @@
+import os
 from datetime import *
 import sys
 import subprocess
@@ -75,7 +76,12 @@ class command_list():
             tmp_lst=[i.split("\n")[0] for i in command.readlines()]
             for i in tmp_lst:
                 password_of_connected.append(i)
-
+        #To generate battery report
+        battery_report=[]
+        with open("commands\\battery_report_commands.exe","r") as command:
+            tmp_lst=[i.split("\n")[0] for i in command.readlines()]
+            for i in tmp_lst:
+                battery_report.append(i)
         #Checking user interfaces or command execution
         #sleep command
         if self.command in sleep_commands:
@@ -104,6 +110,10 @@ class command_list():
         #Password_connected_wifi_command
         if self.command in password_of_connected:
             return 'connected_wifi_passwords'
+        #Battery report
+        if self.command in battery_report:
+            return 'generated_battery_report'
+        #Help command
         # LAST SCRIPT
         else:
                 system_command_code=run(self.command)
@@ -125,7 +135,8 @@ The categories are-:
 6.To open specific website in browser
 7.To open notepad
 8.To show list of previsiously connected network
-9.To show password of previsiously connected network''')
+9.To show password of previsiously connected network
+10.To generate battery report''')
                             category=input("Enter choice number:")
                             if category== '1':
                                 sleep_coordinator=open("commands\\sleep_commands.exe","a+")
@@ -186,6 +197,12 @@ The categories are-:
                                 password_coordinator.close()
                                 speak(f"Ok I will remember this ,You can now use {self.command} command to Show the password of selected wifi networks")
                                 return "connected_wifi_passwords"
+                            elif category=='10':
+                                report_coordinator=open("commands\\battery_report_commands.exe","a+")
+                                report_coordinator.write(self.command+"\n")
+                                report_coordinator.close()
+                                speak(f"Ok I will remember this, You can now use {self.command} to generate battery report")
+                                return "generated_battery_report"
                         elif choice =='n':
                             return "sys_command_not_executed"
                         else:
@@ -319,7 +336,13 @@ Enter the name of your wifi: ''').strip()
                     print("Password is =>",subprocess.check_output(
                         [f'netsh wlan show profiles {network_name} key=clear']).decode().replace('\r'," ").split(
                          "\n")[32].split(':')[1].strip()) 
-                    
+            elif output=="generated_battery_report":   #To generate battery report
+                speak("Generating Battery report")
+                run("powercfg /batteryreport")
+                flag=os.path.isfile("battery-report.html")
+                if(flag==True):
+                    speak("Opening the battery report file")
+                    run("start battery-report.html")
         except KeyboardInterrupt as e:
             confirm = input("Terminate DEV's console[y/n]:")
             if confirm.lower() == 'y':
