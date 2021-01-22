@@ -20,6 +20,7 @@
     - [X]  Show password of previsiously connected network :closed_lock_with_key: 
     - [X]  Generate Battery report
     - [X]  Alter brightness
+    
  ###### If you enter the command for task and it is not in the default commands, don't worry the program will ask you whether to remember the command or not...:innocent:
  ---
  ## How to use this console 
@@ -101,6 +102,7 @@ pip install -r requirements.txt
  |Show password of previsiously connected network|wifi password|
  |Generate battery report and open the battery report and open it in the browser|battery report|
  |To change brightness|brightness|
+ 
 ---
 ## Contributor's list 
 ###### Update your name if you contribute to code  
